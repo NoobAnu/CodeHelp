@@ -3,7 +3,7 @@
 
 int main(){
    int n;
-   cin >> n;
+  cin >> n;
 
 // Consecutive Numbers in pattern nXn matrix
 int row=1,num=1;
