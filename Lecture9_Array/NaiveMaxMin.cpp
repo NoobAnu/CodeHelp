@@ -3,16 +3,17 @@
 using namespace std;
 
 int findMax(int arr[], int n){
-    int max = INT_MIN;
+    int maxi = INT_MIN;
 
 for (int i=0;i<n;i++){
 
-    if(max<arr[i]){
-        max=arr[i];
-    }
+maxi = max(maxi,arr[i]);
+//    if(max<arr[i]){
+//         max=arr[i];
+//     } 
 }
 
-    return max;
+    return maxi;
 }
 
 int findMin(int arr[], int n){
