@@ -11,39 +11,23 @@ void printArray(vector<int> &arr){
 
 void mergeArray(vector<int> &arr1,int m,vector<int> &arr2,int n,vector<int> &arr3){
 
-int i=0,j=0,k;
+int i=0,j=0,k=0;
 
-for(k=0;i<m,j<n;k++)
+while(i<m && j<n)
 {
+if(arr1[i]<arr2[j])
+     arr3[k++]=arr1[i++];
 
-if(arr1[i]<arr2[j]){
-     arr3[k]=arr1[i];
-     if(i<m-1)
-       i++;
-}
-
-else if(arr1[i]>=arr2[j]){
-     arr3[k]=arr2[j];
-  if(j<n-1)
-     j++;
+else if(arr1[i]>=arr2[j])
+     arr3[k++]=arr2[j++];
 }
 
-}
-while(i<m && k<m+n){
-    arr3[k]=arr1[i];
-   if(i<m-1)
-     i++;
-    if(k<m+n-1)
-     k++;
-}
+while(i<m)
+    arr3[k++]=arr1[i++];
 
-while(j<n && k<m+n){
-    arr3[k]=arr2[j];
-    if(j<n-1)
-     j++;
-    if(k<m+n-1)
-     k++;
-}
+while(j<n)
+    arr3[k++]=arr2[j++];
+    
 
 }
 
