@@ -6,4 +6,4 @@
 *.dSYM
 .vscode/
 *.class
-
+*.json
