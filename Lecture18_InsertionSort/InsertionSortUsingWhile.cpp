@@ -5,16 +5,15 @@ void InsertionSort(int arr[],int n){
 int temp,j,i;
 for( i=1;i<n;i++){
     temp = arr[i];
-    for( j=i-1;j>=0;j--){
+    j=i-1;
+    
+    while(j>=0){
     if(arr[j]>temp)
         arr[j+1]=arr[j];
-    
-    else {
+    else 
         break;
-    }
-     //Do Nothing.
-
-    }
+    j--;
+    } 
   arr[j+1]=temp;
 }
 
