@@ -6,7 +6,7 @@ void printArray(vector<int> &arr){
      cout << i << "  ";
 }
 
-  void rotateArray(vector<int>& arr, int m) {
+  void rotateArray(vector<int>& nums, int k) {
         
         vector<int> temp(nums.size());
         
