@@ -20,41 +20,31 @@ void reverse(vector<int> &ans){
 
 void SumArray(vector<int> &a,int n,vector<int> &b,int m){
 vector<int> ans;
-int i=n-1;
-int j=m-1;
-int carry=0;
+int i=n-1,j=m-1,carry=0;
 
 while (i>=0 && j>=0)
 {
-   int sum =a[i]+b[j]+carry;
+   int sum =a[i--]+b[j--]+carry;
    carry=sum/10;
-   sum=sum%10;
-   ans.push_back(sum);
-   i--;
-   j--;
+   ans.push_back(sum%10);
+}
 
-}
 while(i>=0){
-int sum =a[i]+carry;
+int sum =a[i--]+carry;
    carry=sum/10;
-   sum=sum%10;
-   ans.push_back(sum);
-   i--;
+   ans.push_back(sum%10);
 }
+
 while(j>=0){
-int sum =b[j]+carry;
+int sum =b[j--]+carry;
    carry=sum/10;
-   sum=sum%10;
-   ans.push_back(sum);
-   j--;
+   ans.push_back(sum%10);
 }
 
 while(carry!=0){
 int sum =carry;
    carry=sum/10;
-   sum=sum%10;
-   ans.push_back(sum);
-   
+   ans.push_back(sum%10); 
 }
     reverse(ans);
     print(ans);
