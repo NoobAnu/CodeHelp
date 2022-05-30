@@ -4,6 +4,6 @@
 .DS_Store
 *.plist
 *.dSYM
-.vscode/
+.vscode/*.json
 *.class
 *.json
