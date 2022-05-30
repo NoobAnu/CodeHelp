@@ -4,9 +4,8 @@
 using namespace std;
 
 
-bool checkPalindrome(string s){
-int len = s.length();
-transform(s.begin(), s.end(), s.begin(), ::tolower);
+bool checkPalindrome(char s[]){
+
 cout<< s << endl;
 
 
@@ -17,7 +16,7 @@ cout<< s << endl;
 
 int main(){
 
-string s;
+char s[20];
 cin >> s;
 cout << s<<endl;
 
